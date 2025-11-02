@@ -1,10 +1,16 @@
 import { useState } from 'react';
+import Landing from './components/Landing';
 import Quiz from './components/Quiz';
 import CampaignDeck from './components/CampaignDeck';
 
 function App() {
+  const [showLanding, setShowLanding] = useState(true);
   const [quizComplete, setQuizComplete] = useState(false);
   const [answers, setAnswers] = useState(null);
+
+  const handleStart = () => {
+    setShowLanding(false);
+  };
 
   const handleQuizComplete = (quizAnswers) => {
     setAnswers(quizAnswers);
@@ -12,13 +18,16 @@ function App() {
   };
 
   const handleRestart = () => {
+    setShowLanding(true);
     setQuizComplete(false);
     setAnswers(null);
   };
 
   return (
     <div className="min-h-screen bg-black text-white">
-      {!quizComplete ? (
+      {showLanding ? (
+        <Landing onStart={handleStart} />
+      ) : !quizComplete ? (
         <Quiz onComplete={handleQuizComplete} />
       ) : (
         <div>
