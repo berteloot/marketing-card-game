@@ -66,10 +66,13 @@ export default function Landing({ onStart }) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.6 }}
-        className="mb-12"
+        className="mb-8"
       >
-        <p className="text-white/80 serif text-base md:text-lg italic">
+        <p className="text-white/80 serif text-base md:text-lg italic mb-3">
           A fun creative card game for B2B marketers
+        </p>
+        <p className="text-white/90 text-base font-medium">
+          No email required
         </p>
       </motion.div>
 
