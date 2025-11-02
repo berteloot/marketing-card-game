@@ -1,7 +1,6 @@
 services:
-  - type: web
+  - type: static
     name: campaign-spark
-    env: static
     buildCommand: npm install && npm run build
     staticPublishPath: ./dist
     headers:
