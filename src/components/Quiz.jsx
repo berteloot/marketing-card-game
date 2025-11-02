@@ -43,9 +43,9 @@ export default function Quiz({ onComplete }) {
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="px-4 py-1.5 bg-gray-900 rounded-full"
+          className="px-5 py-2 bg-white/5 backdrop-blur-sm rounded-full border border-white/10"
         >
-          <span className="text-white text-sm font-medium">
+          <span className="text-white/90 text-xs font-medium tracking-wider uppercase">
             {currentQuestion + 1} OF {quizQuestions.length}
           </span>
         </motion.div>
@@ -59,20 +59,20 @@ export default function Quiz({ onComplete }) {
         exit={{ opacity: 0, y: -20 }}
         className="flex-1 flex flex-col justify-center px-4"
       >
-        <h2 className="text-2xl md:text-3xl font-medium mb-12 text-center text-white px-4">
+        <h2 className="text-3xl md:text-4xl font-light mb-16 text-center text-white px-4 leading-tight tracking-tight">
           {question.question}
         </h2>
 
-        <div className="space-y-4 max-w-md mx-auto w-full pb-8">
+        <div className="space-y-3 max-w-md mx-auto w-full pb-8">
           {question.options.map((option) => (
             <motion.button
               key={option.id}
               onClick={() => handleAnswer(question.id, option.id)}
-              whileHover={{ scale: 1.01, y: -2 }}
-              whileTap={{ scale: 0.99 }}
-              className="w-full px-8 py-6 bg-white rounded-lg text-left transition-all shadow-lg hover:shadow-xl"
+              whileHover={{ scale: 1.02, y: -4 }}
+              whileTap={{ scale: 0.98 }}
+              className="w-full px-8 py-7 bg-white rounded-2xl text-left transition-all shadow-2xl hover:shadow-white/20 group"
             >
-              <span className="text-black serif text-lg md:text-xl">
+              <span className="text-black serif text-xl md:text-2xl font-medium leading-relaxed block group-hover:text-gray-800 transition-colors">
                 {option.label}
               </span>
             </motion.button>

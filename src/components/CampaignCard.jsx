@@ -50,34 +50,34 @@ export default function CampaignCard({ campaign, onSwipe, onTap, index, total })
         exit={{ scale: 0.9, opacity: 0 }}
         whileDrag={{ cursor: 'grabbing' }}
       >
-        <div className="bg-white rounded-lg p-8 md:p-10 shadow-2xl">
+        <div className="bg-white rounded-3xl p-8 md:p-10 shadow-2xl border border-white/20">
           {/* Hook - Main focus, serif font */}
-          <div className="mb-8">
-            <p className="text-black serif text-2xl md:text-3xl leading-tight text-center">
+          <div className="mb-10">
+            <p className="text-black serif text-3xl md:text-4xl leading-tight text-center font-semibold">
               {campaign.hook}
             </p>
           </div>
 
           {/* Divider */}
-          <div className="h-px bg-gray-200 mb-6"></div>
+          <div className="h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent mb-8"></div>
 
           {/* Type and Objective */}
-          <div className="mb-6 text-center">
-            <p className="text-sm text-gray-600 uppercase tracking-wider mb-2">
+          <div className="mb-8 text-center">
+            <p className="text-xs text-gray-500 uppercase tracking-[0.2em] mb-3 font-medium">
               {campaign.type}
             </p>
-            <p className="text-base text-gray-800 serif">
+            <p className="text-lg text-gray-700 font-light leading-relaxed">
               {campaign.objective}
             </p>
           </div>
 
           {/* Channels */}
-          <div className="mb-4">
-            <div className="flex flex-wrap gap-2 justify-center">
+          <div className="mb-6">
+            <div className="flex flex-wrap gap-2.5 justify-center">
               {campaign.channels.map((channel, i) => (
                 <span
                   key={i}
-                  className="px-4 py-1.5 bg-gray-100 rounded-full text-sm text-gray-700"
+                  className="px-5 py-2 bg-gray-50 rounded-full text-sm text-gray-700 font-medium border border-gray-100"
                 >
                   {channel}
                 </span>
@@ -86,12 +86,12 @@ export default function CampaignCard({ campaign, onSwipe, onTap, index, total })
           </div>
 
           {/* KPIs */}
-          <div className="mb-4">
-            <div className="flex flex-wrap gap-2 justify-center">
+          <div className="mb-6">
+            <div className="flex flex-wrap gap-2.5 justify-center">
               {campaign.kpis.map((kpi, i) => (
                 <span
                   key={i}
-                  className="px-4 py-1.5 bg-white/10 rounded-full text-sm text-white border border-white/20"
+                  className="px-5 py-2 bg-black/5 rounded-full text-sm text-gray-800 font-medium border border-black/10"
                 >
                   {kpi}
                 </span>
@@ -100,7 +100,7 @@ export default function CampaignCard({ campaign, onSwipe, onTap, index, total })
           </div>
 
           {/* Tap hint */}
-          <p className="text-xs text-gray-500 text-center mt-6">Tap to expand</p>
+          <p className="text-xs text-gray-400 text-center mt-8 tracking-wide">Tap to expand</p>
         </div>
       </motion.div>
     );
@@ -121,42 +121,42 @@ export default function CampaignCard({ campaign, onSwipe, onTap, index, total })
           ← Back
         </button>
 
-        <div className="bg-white rounded-lg p-6 md:p-8 shadow-2xl">
+        <div className="bg-white rounded-3xl p-8 md:p-10 shadow-2xl border border-white/20">
           {/* Hook */}
-          <div className="mb-6">
-            <p className="text-black serif text-2xl md:text-3xl leading-tight">
+          <div className="mb-8">
+            <p className="text-black serif text-3xl md:text-4xl leading-tight font-semibold">
               {campaign.hook}
             </p>
           </div>
 
           {/* Divider */}
-          <div className="h-px bg-gray-200 mb-6"></div>
+          <div className="h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent mb-8"></div>
 
           {/* Type and Objective */}
-          <div className="mb-6">
-            <p className="text-sm text-gray-600 uppercase tracking-wider mb-2">
+          <div className="mb-8">
+            <p className="text-xs text-gray-500 uppercase tracking-[0.2em] mb-3 font-medium">
               {campaign.type}
             </p>
-            <p className="text-base text-gray-800 serif mb-4">
+            <p className="text-lg text-gray-700 font-light leading-relaxed mb-6">
               {campaign.objective}
             </p>
           </div>
 
           {/* Description */}
-          <div className="mb-6">
-            <p className="text-gray-700 leading-relaxed serif text-lg">
+          <div className="mb-8">
+            <p className="text-gray-600 leading-relaxed text-base font-light">
               {campaign.description}
             </p>
           </div>
 
           {/* Channels */}
-          <div className="mb-6">
-            <h3 className="text-sm text-gray-600 uppercase tracking-wide mb-3">Channels</h3>
-            <div className="flex flex-wrap gap-2">
+          <div className="mb-8">
+            <h3 className="text-xs text-gray-500 uppercase tracking-[0.2em] mb-4 font-medium">Channels</h3>
+            <div className="flex flex-wrap gap-2.5">
               {campaign.channels.map((channel, i) => (
                 <span
                   key={i}
-                  className="px-4 py-2 bg-gray-100 rounded-lg text-gray-700"
+                  className="px-5 py-2.5 bg-gray-50 rounded-full text-sm text-gray-700 font-medium border border-gray-100"
                 >
                   {channel}
                 </span>
@@ -166,12 +166,12 @@ export default function CampaignCard({ campaign, onSwipe, onTap, index, total })
 
           {/* KPIs */}
           <div className="mb-8">
-            <h3 className="text-sm text-gray-600 uppercase tracking-wide mb-3">Target KPIs</h3>
-            <div className="flex flex-wrap gap-2">
+            <h3 className="text-xs text-gray-500 uppercase tracking-[0.2em] mb-4 font-medium">Target KPIs</h3>
+            <div className="flex flex-wrap gap-2.5">
               {campaign.kpis.map((kpi, i) => (
                 <span
                   key={i}
-                  className="px-4 py-2 bg-white/10 rounded-lg text-white border border-white/20"
+                  className="px-5 py-2.5 bg-black/5 rounded-full text-sm text-gray-800 font-medium border border-black/10"
                 >
                   {kpi}
                 </span>
@@ -183,7 +183,7 @@ export default function CampaignCard({ campaign, onSwipe, onTap, index, total })
           <div className="flex flex-col gap-3">
             <button
               onClick={handleCopy}
-              className="w-full px-6 py-3 bg-gray-900 hover:bg-gray-800 text-white rounded-lg transition-colors"
+              className="w-full px-6 py-4 bg-black hover:bg-gray-900 text-white rounded-2xl transition-all font-medium shadow-lg hover:shadow-xl"
             >
               {copied ? '✓ Copied!' : 'Copy to Clipboard'}
             </button>
@@ -192,7 +192,7 @@ export default function CampaignCard({ campaign, onSwipe, onTap, index, total })
                 const meetingUrl = import.meta.env.VITE_MEETING_URL || 'https://meetings.hubspot.com/stanislas-berteloot';
                 window.open(meetingUrl, '_blank');
               }}
-              className="w-full px-6 py-3 bg-white hover:bg-white/90 text-black rounded-lg transition-colors font-medium"
+              className="w-full px-6 py-4 bg-white hover:bg-gray-50 text-black border-2 border-black/10 rounded-2xl transition-all font-medium shadow-md hover:shadow-lg"
             >
               📅 Schedule a Meeting to Discuss My Marketing Needs
             </button>

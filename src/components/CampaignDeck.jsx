@@ -111,7 +111,7 @@ export default function CampaignDeck({ answers }) {
         className="min-h-screen bg-black flex flex-col items-center justify-center px-4"
       >
         <div className="text-center mb-8">
-          <h2 className="text-3xl font-medium mb-4 text-white serif">That's all!</h2>
+          <h2 className="text-4xl font-light mb-4 text-white serif">That's all!</h2>
           <p className="text-white/70 mb-2">
             You've saved {savedCampaigns.length} campaign{savedCampaigns.length !== 1 ? 's' : ''}
           </p>
@@ -122,20 +122,20 @@ export default function CampaignDeck({ answers }) {
           <button
             onClick={handleGenerateNew}
             disabled={isGenerating}
-            className="px-6 py-4 bg-white hover:bg-white/90 text-black rounded-lg font-medium text-lg disabled:opacity-50 disabled:cursor-not-allowed transition-colors shadow-lg"
+            className="px-6 py-5 bg-white hover:bg-gray-50 text-black rounded-2xl font-semibold text-lg disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-xl hover:shadow-2xl"
           >
             {isGenerating ? 'Generating...' : '✨ Generate New Card with AI'}
           </button>
           <button
             onClick={handleWildCard}
             disabled={isGenerating}
-            className="px-6 py-4 bg-white/10 hover:bg-white/20 text-white border-2 border-white/30 rounded-lg font-medium disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+            className="px-6 py-5 bg-white/5 hover:bg-white/10 backdrop-blur-sm text-white border-2 border-white/20 rounded-2xl font-medium disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg hover:shadow-xl"
           >
             {isGenerating ? 'Generating...' : '🎲 Feeling Stuck? Get a Wild Card'}
           </button>
           <button
             onClick={handleRandomize}
-            className="px-6 py-4 bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded-lg font-medium transition-colors"
+            className="px-6 py-5 bg-white/5 hover:bg-white/10 backdrop-blur-sm text-white border border-white/10 rounded-2xl font-medium transition-all shadow-lg hover:shadow-xl"
           >
             🔄 Randomize Deck
           </button>
@@ -144,7 +144,7 @@ export default function CampaignDeck({ answers }) {
               const meetingUrl = import.meta.env.VITE_MEETING_URL || 'https://meetings.hubspot.com/stanislas-berteloot';
               window.open(meetingUrl, '_blank');
             }}
-            className="px-6 py-4 bg-white/15 hover:bg-white/25 text-white border-2 border-white/40 rounded-lg font-medium transition-colors"
+            className="px-6 py-5 bg-white/10 hover:bg-white/15 backdrop-blur-sm text-white border-2 border-white/30 rounded-2xl font-medium transition-all shadow-lg hover:shadow-xl"
           >
             📅 Schedule a Meeting to Discuss My Marketing Needs
           </button>
@@ -160,8 +160,8 @@ export default function CampaignDeck({ answers }) {
     <div className="min-h-screen bg-black px-4 py-4 flex flex-col items-center justify-between relative">
       {/* Header */}
       <div className="text-center pt-4">
-        <h1 className="text-2xl font-medium mb-2 text-white">Campaign Spark</h1>
-        <p className="text-sm text-white/70">
+        <h1 className="text-4xl font-light mb-2 text-white tracking-tight">Campaign Spark</h1>
+        <p className="text-sm text-white/60 tracking-wide">
           {remaining} card{remaining !== 1 ? 's' : ''} remaining
         </p>
       </div>
@@ -188,22 +188,22 @@ export default function CampaignDeck({ answers }) {
         <button
           onClick={handleWildCard}
           disabled={isGenerating}
-          className="w-full px-6 py-3 bg-white/15 hover:bg-white/25 text-white border-2 border-white/40 rounded-lg font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full px-6 py-4 bg-white/5 hover:bg-white/10 backdrop-blur-sm text-white border-2 border-white/20 rounded-2xl font-medium transition-all shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {isGenerating ? 'Generating...' : '🎲 Feeling Stuck? Get a Wild Card'}
         </button>
 
         {/* Actions */}
-        <div className="flex gap-4">
+        <div className="flex gap-3">
           <button
             onClick={() => handleSwipe('left')}
-            className="flex-1 px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg transition-colors border border-white/20"
+            className="flex-1 px-6 py-4 bg-white/5 hover:bg-white/10 backdrop-blur-sm text-white rounded-2xl transition-all border border-white/10 font-medium shadow-lg hover:shadow-xl"
           >
             Skip
           </button>
           <button
             onClick={() => handleSwipe('right')}
-            className="flex-1 px-6 py-3 bg-white hover:bg-white/90 text-black rounded-lg transition-colors font-medium"
+            className="flex-1 px-6 py-4 bg-white hover:bg-gray-50 text-black rounded-2xl transition-all font-semibold shadow-xl hover:shadow-2xl"
           >
             Save ✓
           </button>
