@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 export default function Landing({ onStart }) {
   return (
-    <div className="min-h-screen bg-[#8B1A1A] flex flex-col items-center justify-center px-6 relative overflow-hidden">
+    <div className="min-h-screen bg-black flex flex-col items-center justify-center px-6 relative overflow-hidden">
       {/* NYT-style logo or branding */}
       <div className="absolute top-8 left-1/2 transform -translate-x-1/2">
         <h1 className="text-white text-xl font-serif tracking-wide">Campaign Spark</h1>
@@ -20,26 +20,10 @@ export default function Landing({ onStart }) {
           <div className="absolute inset-0 rounded-full"></div>
           
           {/* Cream/beige ring */}
-          <div className="absolute inset-2 rounded-full border-[20px] border-[#E8D5B7] bg-[#E8D5B7]/40">
-            {/* Marketing text fragments */}
-            <div className="absolute top-8 left-1/2 transform -translate-x-1/2">
-              <span className="text-[#D4542C] text-2xl font-bold serif">CAMPAIGN</span>
-            </div>
-            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-              <span className="text-[#D4542C] text-xl font-bold serif">SPARK</span>
-            </div>
-          </div>
+          <div className="absolute inset-2 rounded-full border-[20px] border-[#E8D5B7] bg-[#E8D5B7]/40"></div>
           
           {/* Orange-red ring */}
-          <div className="absolute inset-14 rounded-full border-[16px] border-[#D4542C] bg-[#D4542C]/30">
-            {/* Additional text fragments */}
-            <div className="absolute top-12 right-8">
-              <span className="text-white text-sm font-bold uppercase tracking-wider">IDEAS</span>
-            </div>
-            <div className="absolute bottom-12 left-8">
-              <span className="text-white text-sm font-bold uppercase tracking-wider">MARKETING</span>
-            </div>
-          </div>
+          <div className="absolute inset-14 rounded-full border-[16px] border-[#D4542C] bg-[#D4542C]/30"></div>
           
           {/* Black ring */}
           <div className="absolute inset-24 rounded-full border-[12px] border-black bg-black/60"></div>
@@ -97,7 +81,7 @@ export default function Landing({ onStart }) {
         transition={{ delay: 0.7, duration: 0.6 }}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className="px-12 py-4 bg-white text-[#8B1A1A] rounded-lg font-semibold text-lg shadow-2xl hover:shadow-white/20 transition-all"
+        className="px-12 py-4 bg-white text-black rounded-lg font-semibold text-lg shadow-2xl hover:shadow-white/20 transition-all"
       >
         Play the Marketing Game
       </motion.button>
