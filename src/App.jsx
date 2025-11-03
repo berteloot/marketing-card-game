@@ -24,7 +24,21 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-black text-white relative">
+      {/* Nytro Logo - Top Left */}
+      <a
+        href="https://www.nytromarketing.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="absolute top-4 left-4 z-20 hover:opacity-80 transition-opacity"
+      >
+        <img
+          src="/logo_Nytro_color.png"
+          alt="Nytro Marketing"
+          className="w-12 h-12"
+        />
+      </a>
+      
       {showLanding ? (
         <Landing onStart={handleStart} />
       ) : !quizComplete ? (
