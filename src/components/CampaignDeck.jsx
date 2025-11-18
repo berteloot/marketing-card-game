@@ -119,6 +119,21 @@ export default function CampaignDeck({ answers }) {
         </div>
 
         <div className="flex flex-col gap-3 w-full max-w-md">
+          {/* Lead Gen Assessment CTA - Most Prominent */}
+          <a
+            href="https://lead-gen-assessment.nytromarketing.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-5 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white rounded-2xl font-semibold text-lg transition-all shadow-xl hover:shadow-2xl text-center"
+          >
+            📊 Show Me How My Lead Gen Stacks Up
+            <span className="block text-sm font-normal mt-1 opacity-90">
+              Get your personalized demand gen health check (3 min)
+            </span>
+          </a>
+          
+          <div className="h-px bg-white/10 my-2"></div>
+          
           <button
             onClick={handleGenerateNew}
             disabled={isGenerating}

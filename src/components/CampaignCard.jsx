@@ -187,6 +187,14 @@ export default function CampaignCard({ campaign, onSwipe, onTap, index, total })
             >
               {copied ? '✓ Copied!' : 'Copy to Clipboard'}
             </button>
+            <a
+              href="https://lead-gen-assessment.nytromarketing.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full px-6 py-4 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white rounded-2xl transition-all font-semibold shadow-lg hover:shadow-xl text-center"
+            >
+              📊 Show Me How My Lead Gen Stacks Up
+            </a>
             <button
               onClick={() => {
                 const meetingUrl = import.meta.env.VITE_MEETING_URL || 'https://meetings.hubspot.com/stanislas-berteloot';
